@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>P2P Physician Secured Network Chat | Inbox</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="md-skin">
+
+    <div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" width="48" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Dr. Rick Sanchez</strong>
+                             </span> <span class="text-muted text-xs block">Ph.D <b class="caret"></b></span> </span> </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="inbox.html">Inbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active"><a href="mailbox.html">Inbox <span class="label label-warning pull-right">16/24</span></a> </li>
+                <li><a href="inbox_detail.html">Email view</a></li>
+                <li><a href="inbox_compose.html">Compose email</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+	        <div class="navbar-header">
+	            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+	            <form role="search" class="navbar-form-custom" action="search_results.html">
+	                <div class="form-group">
+	                    <input type="text" placeholder="Search for anything" class="form-control" name="top-search" id="top-search">
+	                </div>
+	            </form>
+	        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome to P2P Physician Secured Network Chat</span>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a7.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <small class="pull-right">46h ago</small>
+                                    <strong>Mike Loreipsum</strong> sent you a message. <br>
+                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a4.jpg">
+                                </a>
+                                <div class="media-body ">
+                                    <small class="pull-right text-navy">5h ago</small>
+                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/profile.jpg">
+                                </a>
+                                <div class="media-body ">
+                                    <small class="pull-right">23h ago</small>
+                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="mailbox.html">
+                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+
+        <div class="wrapper wrapper-content">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content mailbox-content">
+                        <div class="file-manager">
+                            <a class="btn btn-block btn-primary compose-mail" href="inbox_compose.html">New Message</a>
+                            <button type="button" class="btn btn-primary btn-warning btn-block" data-toggle="modal" data-target="#myModal">
+                                Patient Lookup
+                            </button>
+
+                            <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content animated fadeIn">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                            <h4 class="modal-title">Patient Lookup</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group"><label>Search (ideally this populates the table onkeyup)</label> <input type="email" placeholder="Enter Patient Name" class="form-control"></div>
+					                        <table class="table">
+					                            <thead>
+					                            <tr>
+					                                <th>#</th>
+					                                <th>First Name</th>
+					                                <th>Last Name</th>
+					                                <th>&nbsp;</th>
+					                            </tr>
+					                            </thead>
+					                            <tbody>
+					                            <tr>
+					                                <td valign="middle">1</td>
+					                                <td valign="middle">Mark</td>
+					                                <td valign="middle">Otto</td>
+					                                <td><a href="" class="btn btn-primary btn-sm pull-right">View</a></td>
+					                            </tr>
+					                            <tr>
+					                                <td valign="middle">2</td>
+					                                <td valign="middle">Jacob</td>
+					                                <td valign="middle">Thornton</td>
+					                                <td><a href="" class="btn btn-primary btn-sm pull-right">View</a></td>
+					                            </tr>
+					                            <tr>
+					                                <td valign="middle">3</td>
+					                                <td valign="middle">Larry</td>
+					                                <td valign="middle">the Bird</td>
+					                                <td><a href="" class="btn btn-primary btn-sm pull-right">View</a></td>
+					                            </tr>
+					                            <tr>
+					                                <td valign="middle">4</td>
+					                                <td valign="middle">Steve</td>
+					                                <td valign="middle">James</td>
+					                                <td><a href="" class="btn btn-primary btn-sm pull-right">View</a></td>
+					                            </tr>
+					                            <tr>
+					                                <td valign="middle">5</td>
+					                                <td valign="middle">Morty</td>
+					                                <td valign="middle">Smith</td>
+					                                <td><a href="" class="btn btn-primary btn-sm pull-right">View</a></td>
+					                            </tr>
+					                            </tbody>
+					                        </table>
+					                        <p class="text-right">
+					                        	<small>View button should land on a profile page for a patient</small>
+					                        </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-25"></div>
+                            <h5>Folders</h5>
+                            <ul class="folder-list m-b-md" style="padding: 0">
+                                <li><a href="mailbox.html"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning pull-right">16</span> </a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-envelope-o"></i> Send Message</a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-certificate"></i> Important</a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-danger pull-right">2</span></a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-trash-o"></i> Trash</a></li>
+                            </ul>
+                            <h5>Categories</h5>
+                            <ul class="category-list" style="padding: 0">
+                                <li><a href="#"> <i class="fa fa-circle text-navy"></i> Surgery </a></li>
+                                <li><a href="#"> <i class="fa fa-circle text-danger"></i> X-Ray</a></li>
+                                <li><a href="#"> <i class="fa fa-circle text-primary"></i> Scans</a></li>
+                                <li><a href="#"> <i class="fa fa-circle text-info"></i> Results</a></li>
+                                <li><a href="#"> <i class="fa fa-circle text-warning"></i> Personal</a></li>
+                            </ul>
+
+                            <h5 class="tag-title">Patients</h5>
+                            <ul class="tag-list" style="padding: 0">
+                                <li><a href=""><i class="fa fa-tag"></i> David Jones</a></li>
+                                <li><a href=""><i class="fa fa-tag"></i> Steve Stevens</a></li>
+                                <li><a href=""><i class="fa fa-tag"></i> Rick Sanchez</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 animated fadeInRight">
+            <div class="mail-box-header">
+				
+                <form method="get" action="index.html" class="pull-right mail-search">
+                    <div class="input-group">
+
+                        <input type="text" class="form-control input-sm" name="search" placeholder="Search email">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-sm btn-primary">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <h2>
+                    Inbox (16)
+                </h2>
+                <div class="mail-tools tooltip-demo m-t-md">
+                    <div class="btn-group pull-right">
+                        <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
+                        <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
+
+                    </div>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="Refresh inbox"><i class="fa fa-refresh"></i> Refresh</button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Mark as important"><i class="fa fa-exclamation"></i> </button>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to trash"><i class="fa fa-trash-o"></i> </button>
+
+                </div>
+            </div>
+                <div class="mail-box">
+
+                <table class="table table-hover table-mail">
+                <tbody>
+                <tr class="unread">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Anna Smith</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Lorem ipsum dolor noretek imit set.</a></td>
+                    <td class=""><i class="fa fa-paperclip"></i></td>
+                    <td class="text-right mail-date">6.10 AM</td>
+                </tr>
+                <tr class="unread">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks" checked>
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Jack Nowak</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Aldus PageMaker including versions of Lorem Ipsum.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">8.22 PM</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Facebook</a> <span class="label label-warning pull-right">Clients</span> </td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Many desktop publishing packages and web page editors.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jan 16</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Mailchip</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">There are many variations of passages of Lorem Ipsum.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Mar 22</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Alex T.</a> <span class="label label-danger pull-right">Documents</span></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Lorem ipsum dolor noretek imit set.</a></td>
+                    <td class=""><i class="fa fa-paperclip"></i></td>
+                    <td class="text-right mail-date">December 22</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Monica Ryther</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">The standard chunk of Lorem Ipsum used.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jun 12</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Sandra Derick</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Contrary to popular belief.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">May 28</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Patrick Pertners</a> <span class="label label-info pull-right">Adv</span></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">If you are going to use a passage of Lorem </a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">May 28</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Michael Fox</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Humour, or non-characteristic words etc.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Dec 9</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Damien Ritz</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Oor Lorem Ipsum is that it has a more-or-less normal.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jun 11</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Anna Smith</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Lorem ipsum dolor noretek imit set.</a></td>
+                    <td class=""><i class="fa fa-paperclip"></i></td>
+                    <td class="text-right mail-date">6.10 AM</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Jack Nowak</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Aldus PageMaker including versions of Lorem Ipsum.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">8.22 PM</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Mailchip</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">There are many variations of passages of Lorem Ipsum.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Mar 22</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Alex T.</a> <span class="label label-warning pull-right">Clients</span></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Lorem ipsum dolor noretek imit set.</a></td>
+                    <td class=""><i class="fa fa-paperclip"></i></td>
+                    <td class="text-right mail-date">December 22</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Monica Ryther</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">The standard chunk of Lorem Ipsum used.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jun 12</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Sandra Derick</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Contrary to popular belief.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">May 28</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Patrick Pertners</a> </td>
+                    <td class="mail-subject"><a href="inbox_detail.html">If you are going to use a passage of Lorem </a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">May 28</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Michael Fox</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Humour, or non-characteristic words etc.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Dec 9</td>
+                </tr>
+                <tr class="read">
+                    <td class="check-mail">
+                        <input type="checkbox" class="i-checks">
+                    </td>
+                    <td class="mail-ontact"><a href="inbox_detail.html">Damien Ritz</a></td>
+                    <td class="mail-subject"><a href="inbox_detail.html">Oor Lorem Ipsum is that it has a more-or-less normal.</a></td>
+                    <td class=""></td>
+                    <td class="text-right mail-date">Jun 11</td>
+                </tr>
+                </tbody>
+                </table>
+
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> DCAS &copy; 2017
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+</body>
+
+</html>
